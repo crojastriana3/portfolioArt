@@ -1,0 +1,22 @@
+.layout {
+  background-image: url(../../../assets/footer.svg);
+  width: 100%;
+  height: 10.2163125em;
+  flex-shrink: 0;
+}
+.margin {
+  margin-top: 3em;
+  margin-bottom: 0em;
+}
+h2 {
+  color: #ffffff;
+}
+p {
+  color: #934f4c;
+}
+.bi {
+  margin-left: 2em;
+}
+i {
+  color: #ffffff;
+}
