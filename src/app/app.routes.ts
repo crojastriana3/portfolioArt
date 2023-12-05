@@ -1,9 +1,7 @@
-//import { RouterModule, Routes } from '@angular/router';
-import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { InitComponent } from './components/init/init.component';
 //import { NgModule, Component } from '@angular/core';
 import { AppComponent } from './app.component';
 import { Routes } from '@angular/router';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 
 export const routes: Routes = [
   {
@@ -12,22 +10,34 @@ export const routes: Routes = [
     children: [
       {
         path: '',
+        redirectTo: '/home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'home',
         loadComponent: () =>
-          import('./app.component').then((m) => m.AppComponent),
+          import('./components/banner/banner.component').then(
+            (m) => m.BannerComponent
+          ),
+      },
+      {
+        path: 'works',
+        loadComponent: () =>
+          import('./components/works/works.component').then(
+            (m) => m.WorksComponent
+          ),
+      },
+      {
+        path: 'about',
+        loadComponent: () =>
+          import('./components/about/about.component').then(
+            (m) => m.AboutComponent
+          ),
       },
     ],
   },
-  { path: '**', component: PagenotfoundComponent },
-
-  //{ path: 'home', component: InitComponent },
-  // { path: '', pathMatch: 'full', redirectTo: 'home' },
-  // { path: '**', component: PagenotfoundComponent },
-  //{ path: 'not-found', component: PagenotfoundComponent },
+  {
+    path: '**',
+    component: PagenotfoundComponent,
+  },
 ];
-
-/*@NgModule(
-    {
-        imports: [RouterModule.forRoot(routes,{useHash:true})],
-        exports: [RouterModule],
-    }
-)*/
