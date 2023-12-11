@@ -20,3 +20,19 @@ p {
 i {
   color: #ffffff;
 }
+img {
+  width: 419px;
+  height: 118px;
+  flex-shrink: 0;
+}
+.icon {
+  width: 59px;
+  height: 42px;
+  flex-shrink: 0;
+}
+.icon_two {
+  width: 60px;
+  height: 62px;
+  flex-shrink: 0;
+  margin-left: 1em;
+}
