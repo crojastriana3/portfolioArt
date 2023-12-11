@@ -32,3 +32,10 @@ li:hover {
 .layout {
   margin-right: 2.5em;
 }
+a {
+  font-family: Outfit;
+  line-height: normal;
+  font-style: italic;
+  line-height: normal;
+  font-size: 1.688em;
+}

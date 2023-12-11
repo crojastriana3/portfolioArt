@@ -1,12 +1,13 @@
 //import { NgModule, Component } from '@angular/core';
-import { AppComponent } from './app.component';
+
 import { Routes } from '@angular/router';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: AppComponent,
+    component: LayoutComponent,
     children: [
       {
         path: '',
